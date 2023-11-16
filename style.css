@@ -1,0 +1,359 @@
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+@media (min-width: 300px) {
+    .main-box {
+        flex-direction: column;
+    }
+
+    .result-box {
+        border-bottom-left-radius: 9%;
+        border-bottom-right-radius: 9%;
+    }
+
+    .result-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .result-circle h1 {
+        font-size: 55px;
+    }
+
+    .result-box h3 {
+        font-size: large;
+        margin: 24px;
+    }
+
+    .result-circle p {
+        font-size: 17px;
+    }
+
+    .summary-box {
+        padding: 24px 32px 8px;
+    }
+
+    .summary-box h3 {
+        font-size: 18px;
+        margin-bottom: 22px;
+    }
+
+    .summary-box figure,
+    .summary-box button {
+        margin: 0 0 15px 0;
+        font-size: 16px;
+    }
+
+    .attribution {
+        position: sticky;
+    }
+}
+
+@media (min-width: 700px) {
+    .main-box {
+        flex-direction: row;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 36px 50px 10px hsl(221, 100%, 96%);
+        border-radius: 35px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        -ms-border-radius: 35px;
+        -o-border-radius: 35px;
+    }
+
+    .result-box {
+        width: 50%;
+        border-radius: 35px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        -ms-border-radius: 35px;
+        -o-border-radius: 35px;
+        height: 470px;
+    }
+
+    .result-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .result-circle h1 {
+        font-size: 70px;
+    }
+
+    .result-box h2 {
+        font-size: 30px;
+    }
+
+    .result-box h3 {
+        font-size: 24px;
+        margin: 20px 30px 30px;
+    }
+
+    .result-box>p {
+        padding: 0 26px;
+        font-size: 16px;
+        padding: 0 26px;
+        scale: 1.1;
+    }
+
+    .summary-box {
+        width: 50%;
+        padding: 40px;
+        justify-content: space-between;
+    }
+
+    .summary-box h3 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .summary-box figure,
+    .summary-box button {
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+
+    .attribution {
+        position: absolute;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Hanken Grotesk;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    bottom: 5px;
+    left: 50%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.main-box {
+    display: flex;
+}
+
+.result-box {
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px 40px 40px;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.result-box h3 {
+    font-weight: 600;
+    color: hsla(0, 0%, 100%, 60%);
+}
+
+.result-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    padding: 31px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.result-box p {
+    margin: 0;
+    color: hsla(0, 0%, 100%, 30%);
+    font-weight: 600;
+}
+
+.result-circle h1 {
+    margin: 0;
+    color: white;
+    font-weight: 800;
+}
+
+.result-box h2 {
+    color: white;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    padding: 5px 5px 0 5px;
+}
+
+.result-box>p {
+    color: hsla(0, 0%, 100%, 60%);
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.summary-box {
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.summary-box h3 {
+    margin-top: 0;
+    color: hsl(224, 30%, 27%);
+}
+
+.summary-box figure,
+.summary-box button {
+    width: 100%;
+    padding: 17.5px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+}
+
+/* Create corner borders with a background color */
+.corner-border {
+    content: "";
+    position: absolute;
+    /* Position the corner borders */
+    width: 10px;
+    /* Set the width of the corner borders to 10px */
+    height: 10px;
+    /* Set the height of the corner borders to 10px */
+    background-color: transparent;
+    /* Set the border color */
+    border: 1.3px solid rgba(211, 211, 211, 1);
+    /* Add a border to the corner borders */
+    background-color: transparent;
+}
+
+/* Position the top-left corner border */
+.corner-border.top-left {
+    top: 0;
+    left: 0;
+    border-top-left-radius: 12px;
+    /* Custom border radius for the top-left corner */
+    border-right: 0;
+    /* Remove the right border for the top-left corner */
+    border-bottom: 0;
+    /* Remove the bottom border for the top-left corner */
+}
+
+/* Position the top-right corner border */
+.corner-border.top-right {
+    top: 0;
+    right: 0;
+    border-top-right-radius: 12px;
+    /* Custom border radius for the top-right corner */
+    border-left: 0;
+    /* Remove the left border for the top-right corner */
+    border-bottom: 0;
+    /* Remove the bottom border for the top-right corner */
+}
+
+/* Position the bottom-right corner border */
+.corner-border.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 12px;
+    /* Custom border radius for the bottom-right corner */
+    border-left: 0;
+    /* Remove the left border for the bottom-right corner */
+    border-top: 0;
+    /* Remove the top border for the bottom-right corner */
+}
+
+/* Position the bottom-left corner border */
+.corner-border.bottom-left {
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 12px;
+    /* Custom border radius for the bottom-left corner */
+    border-right: 0;
+    /* Remove the right border for the bottom-left corner */
+    border-top: 0;
+    /* Remove the top border for the bottom-left corner */
+}
+
+.flex-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-box .red-box {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 5%);
+}
+
+.summary-box .yellow-box {
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 5%);
+}
+
+.summary-box .green-box {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 5%);
+}
+
+.summary-box .cobalt-box {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 5%);
+}
+
+.summary-box figure .score {
+    color: hsl(224, 30%, 27%);
+    display: flex;
+    gap: 7.5px;
+}
+
+.summary-box figure .hundred {
+    color: grey;
+}
+
+.summary-box .continue-btn {
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    margin-top: 10px;
+    font-family: hanken grotesk;
+    font-size: 18px;
+    height: 55px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.continue-btn:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
